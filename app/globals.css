@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #1d1d1f;
+  background: #fafaf9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #fafaf9;
+  color: #1d1d1f;
+  font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.map-placeholder {
+  background-color: #e4ebe3;
+  background-image:
+    linear-gradient(30deg, rgba(255, 255, 255, 0.42) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.42) 87.5%, rgba(255, 255, 255, 0.42)),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.42) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.42) 87.5%, rgba(255, 255, 255, 0.42));
+  background-size: 44px 76px;
+}
+
+.map-demo-pin {
+  position: absolute;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 3px solid white;
+  border-radius: 999px;
+  background: #ff5d4a;
+  box-shadow: 0 4px 12px rgba(31, 41, 55, 0.2);
+}
+
+.map-demo-pin-one { left: 17%; top: 28%; }
+.map-demo-pin-two { right: 17%; top: 22%; background: #6b8e75; }
+.map-demo-pin-three { bottom: 20%; right: 27%; background: #6c63a8; }
+
+.map-overlay {
+  display: flex;
+  max-width: 220px;
+  flex-direction: column;
+  gap: 3px;
+  border: 1px solid #e7e5e4;
+  border-radius: 11px;
+  background: white;
+  padding: 9px 11px;
+  box-shadow: 0 6px 22px rgba(31, 41, 55, 0.16);
+  color: #1d1d1f;
+  font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+.map-overlay strong {
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.map-overlay span {
+  overflow: hidden;
+  color: #78716c;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .map-demo-pin-one { left: 24%; top: 30%; }
+  .map-demo-pin-two { right: 25%; top: 25%; }
+  .map-demo-pin-three { bottom: 25%; right: 34%; }
+}

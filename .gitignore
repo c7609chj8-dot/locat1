@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# Next.js
+/.next/
+/out/
+
+# production
+/build
+
+# local environment files
+.env*.local
+
+# tooling
+coverage/
+.DS_Store
+*.log
