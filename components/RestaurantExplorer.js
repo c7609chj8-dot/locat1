@@ -230,6 +230,7 @@ export default function RestaurantExplorer() {
 
       {selectedRestaurant && (
         <RestaurantDetail
+          key={selectedRestaurant.id}
           restaurant={selectedRestaurant}
           currentLocation={location}
           isFavorite={isFavorite(selectedRestaurant.id)}

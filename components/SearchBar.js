@@ -1,13 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function SearchBar({ query, recentSearches, isLocating, onSearch, onLocate, onSelectRecent }) {
   const [value, setValue] = useState(query || "");
-
-  useEffect(() => {
-    setValue(query || "");
-  }, [query]);
 
   function submit(event) {
     event.preventDefault();

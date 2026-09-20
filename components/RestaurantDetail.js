@@ -1,18 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { buildKakaoNavigationUrl, buildKakaoPlaceUrl, formatDistance, getSimpleCategory } from "@/lib/restaurant";
 
 export default function RestaurantDetail({ restaurant, currentLocation, isFavorite, onToggleFavorite, onClose }) {
   const [routeInfo, setRouteInfo] = useState(null);
   const [routeError, setRouteError] = useState("");
   const [isLoadingRoute, setIsLoadingRoute] = useState(false);
-
-  useEffect(() => {
-    if (!restaurant) return;
-    setRouteInfo(null);
-    setRouteError("");
-  }, [restaurant?.id]);
 
   if (!restaurant) return null;
 
